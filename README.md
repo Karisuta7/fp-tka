@@ -1,5 +1,15 @@
 # 💻 Final Project - TKA (fp-tka)
 
+## 🧾 Ringkasan Proyek
+
+- **Tujuan**: Merancang, membangun, dan menguji arsitektur cloud untuk aplikasi absensi face recognition.
+- **Aplikasi**: Backend (Python FastAPI), Frontend (React JS), Database (kemungkinan besar MongoDB, perlu dicek di repo).
+- **Budget**: Maksimal \$100/bulan.
+- **Platform**: GCP / Digital Ocean / Azure / Local VM.
+- **Output Utama**: Laporan di GitHub (arsitektur, implementasi, hasil load testing).
+
+---
+
 ## 👥 Anggota Kelompok
 
 | Nama                     | NRP        |
