@@ -16,6 +16,34 @@
 
 ![Arsitektur](https://github.com/user-attachments/assets/eb80ed94-b284-4493-a0e8-9b10638cc044)
 
+### 📝 Penjelasan Detail Diagram
+
+Diagram ini memvisualisasikan arsitektur tiga tingkat (**3-tier architecture**) yang modern dan scalable.
+
+#### 🔹 Load Balancer (Tier 1 - Web Tier)
+- **VM**: `vm1` seharga \$4/bulan  
+- **Software**: Nginx  
+- **Fungsi**: Ini adalah gerbang utama aplikasi. VM ini memiliki Public IP yang bisa diakses oleh pengguna dari internet. Tugasnya adalah menerima semua permintaan masuk dan meneruskannya secara seimbang ke salah satu dari dua App Server. Ini mencegah satu server menjadi terlalu terbebani.
+
+#### 🔹 Application Servers (Tier 2 - Logic Tier)
+- **VM**: 2 unit `vm3`, masing-masing seharga \$12/bulan (**Total \$24/bulan**)  
+- **Software**: Backend (Python FastAPI) dan Frontend (React JS)  
+- **Fungsi**: Ini adalah "otak" dari aplikasi. Mereka menjalankan kode yang menangani logika bisnis (seperti pengenalan wajah) dan berkomunikasi dengan database. Kedua server ini berada di **Jaringan Privat**, sehingga tidak bisa diakses langsung dari internet. Mereka hanya menerima traffic dari Load Balancer.
+
+#### 🔹 Database Server (Tier 3 - Data Tier)
+- **VM**: `vm2` seharga \$6/bulan  
+- **Software**: MongoDB  
+- **Fungsi**: Tempat penyimpanan semua data aplikasi. Seperti App Server, VM ini juga berada di Jaringan Privat dan hanya mengizinkan koneksi dari App Server. Ini adalah lapisan paling aman untuk melindungi data sensitif.
+
+---
+
+### 🔄 Alur Kerja (Workflow)
+1. Seorang pengguna membuka aplikasi di browser mereka.
+2. Permintaan dikirim melalui Internet ke Public IP dari Load Balancer.
+3. Load Balancer menerima permintaan dan memilih salah satu App Server yang paling tidak sibuk.
+4. App Server memproses permintaan. Jika perlu data, ia akan menghubungi Database Server.
+5. Database Server mengembalikan data yang diminta ke App Server.
+6. App Server mengirimkan respons melalui Load Balancer kembali ke pengguna.
 ---
 
 ### 🏗️ Rencana Arsitektur Aplikasi
