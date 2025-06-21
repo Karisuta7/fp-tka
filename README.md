@@ -196,7 +196,7 @@ Linux (ubuntu 24.04)
 
 3. `vm-app-2` - Allow Private IP from Load Balancer
 
-(Gambar)
+![image3](https://github.com/user-attachments/assets/662cf1df-7359-4853-beb4-137fbc5eacd1)
 
 ---
 
