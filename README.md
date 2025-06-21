@@ -185,3 +185,28 @@ Konfigurasi sama dengan `vm-loadbalancer`
 
 ---
 
+#### Setting NSG (Firewall) untuk masing masing VM
+1. `vm-loadbalancer` - Allow any IP
+
+
+(Gambar)
+
+---
+
+2. `vm-app-1` - Allow Private IP from Load Balancer
+
+(Gambar)
+
+---
+
+3. `vm-app-2` - Allow Private IP from Load Balancer
+
+(Gambar)
+
+---
+
+4. `vm-database` - Allow Private IP from `vm-app-1` and `vm-app-2`
+
+(Gambar)
+
+---
