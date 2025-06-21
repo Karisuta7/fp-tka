@@ -184,8 +184,7 @@ Linux (ubuntu 24.04)
 #### Setting NSG (Firewall) untuk masing masing VM
 1. `vm-loadbalancer` - Allow any IP
 
-
-(Gambar)
+![image8](https://github.com/user-attachments/assets/b3c677fd-8a55-4508-a5e4-68b5ef096092)
 
 ---
 
