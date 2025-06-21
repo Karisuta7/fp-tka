@@ -151,7 +151,7 @@ Setting Subnet `default`
 #### Membuat VM
 1. `vm-loadbalancer`
 
-(Gambar)
+![image2](https://github.com/user-attachments/assets/7e59d3f7-2550-48c1-a8fb-e708b8b90959)
 
 ---
 
