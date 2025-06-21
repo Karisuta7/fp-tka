@@ -108,9 +108,80 @@ Private IP - VM2 (MongoDB, $6)
 
 ## Overview Problem
 
-Anda adalah seorang lulusan Teknologi Informasi, sebagai ahli IT, salah satu kemampuan yang harus dimiliki adalah Keampuan merancang, membangun, mengelola aplikasi berbasis komputer menggunakan layanan awan untuk memenuhi kebutuhan organisasi.
+Anda adalah seorang lulusan Teknologi Informasi, sebagai ahli IT salah satu kemampuan yang harus dimiliki adalah kemampuan merancang, membangun, mengelola aplikasi berbasis komputer menggunakan layanan awan untuk memenuhi kebutuhan organisasi.
 
 Pada suatu saat anda mendapatkan project departemen untuk mendeploy sebuah aplikasi Absen berbasis face recognition dengan komponen Backend menggunakan python Fast API dan frontend menggunakan React JS. Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutuhan aplikasi tersebut.
+
+---
+
+## Alur Pengerjaan dan Implementasi
+
+### Mempersiapkan Lingkungan Kerja
+
+#### Membuat Resource Group pada Azure
+- Nama: `cloudfp`
+- Location: Central India (Asia Pacific)
+
+(Gambar)
+
+---
+
+#### Membuat Virtual Network (VNet)
+- Nama: `cloudfp-net`
+- Address Space: `10.1.0.0/16`
+- Location: Central India (Asia Pacific)
+
+(Gambar)
+
+---
+
+Menambahkan Subnet pada VNet:
+- Nama: `default`
+
+(Gambar)
+
+---
+
+Setting Subnet `default`
+
+(Gambar)
+
+---
+
+#### Membuat VM
+1. `vm-loadbalancer`
+
+(Gambar)
+
+---
+
+- Resource:
+$8/bulan - Standard B1s (1 vcpu, 1 GiB memory)
+
+- OS: 
+Linux (ubuntu 24.04)
+
+---
+
+2. `vm-app-1`
+
+(Gambar)
+
+---
+
+Konfigurasi sama dengan `vm-loadbalancer`
+
+---
+
+3. `vm-app-2`
+
+(Gambar)
+
+---
+
+4. `vm-database`
+
+(Gambar)
 
 ---
 
