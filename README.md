@@ -1,9 +1,9 @@
-# 💻 Final Project - TKA (fp-tka)
+# 💻 Final Project - TKA
 
 ## 🧾 Ringkasan Proyek
 
 - **Tujuan**: Merancang, membangun, dan menguji arsitektur cloud untuk aplikasi absensi face recognition.
-- **Aplikasi**: Backend (Python FastAPI), Frontend (React JS), Database (kemungkinan besar MongoDB, perlu dicek di repo).
+- **Aplikasi**: Backend (Python FastAPI), Frontend (React JS), Database.
 - **Budget**: Maksimal \$100/bulan.
 - **Platform**: GCP / Digital Ocean / Azure / Local VM.
 - **Output Utama**: Laporan di GitHub (arsitektur, implementasi, hasil load testing).
@@ -104,3 +104,13 @@ Private IP - VM2 (MongoDB, $6)
 ### ✅ Mengapa Arsitektur ini Dipilih
 - Opsi ini ideal: aman di budget, siap untuk skala besar, dan tunjukkan pemahaman cloud (load balancing & scale out).
 - Sisa budget $66 bisa dipakai kalau nanti mau upgrade VM saat uji performa.
+---
+
+## Overview Problem
+
+Anda adalah seorang lulusan Teknologi Informasi, sebagai ahli IT, salah satu kemampuan yang harus dimiliki adalah Keampuan merancang, membangun, mengelola aplikasi berbasis komputer menggunakan layanan awan untuk memenuhi kebutuhan organisasi.
+
+Pada suatu saat anda mendapatkan project departemen untuk mendeploy sebuah aplikasi Absen berbasis face recognition dengan komponen Backend menggunakan python Fast API dan frontend menggunakan React JS. Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutuhan aplikasi tersebut.
+
+---
+
