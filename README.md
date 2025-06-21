@@ -169,13 +169,9 @@ Linux (ubuntu 24.04)
 
 ---
 
-Konfigurasi sama dengan `vm-loadbalancer`
-
----
-
 3. `vm-app-2`
 
-(Gambar)
+![image11](https://github.com/user-attachments/assets/6b32b031-d59b-4648-af57-9ebec57e8f5a)
 
 ---
 
