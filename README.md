@@ -155,6 +155,9 @@ Setting Subnet `default`
 
 ---
 
+- Private IP:
+`10.1.0.4`
+
 - Resource:
 $8/bulan - Standard B1s (1 vcpu, 1 GiB memory)
 
@@ -166,6 +169,11 @@ Linux (ubuntu 24.04)
 2. `vm-app-1`
 
 ![image7](https://github.com/user-attachments/assets/cd21aeb2-8d13-4020-8cb1-8343791cd908)
+
+---
+
+- Private IP:
+`10.1.0.5`
 
 ---
 
