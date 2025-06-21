@@ -124,7 +124,6 @@ Pada suatu saat anda mendapatkan project departemen untuk mendeploy sebuah aplik
 
 ![image9](https://github.com/user-attachments/assets/c17a403d-40e7-4faf-a0d3-be3469f0e1e2)
 
-
 ---
 
 #### Membuat Virtual Network (VNet)
@@ -132,7 +131,7 @@ Pada suatu saat anda mendapatkan project departemen untuk mendeploy sebuah aplik
 - Address Space: `10.1.0.0/16`
 - Location: Central India (Asia Pacific)
 
-(Gambar)
+![image14](https://github.com/user-attachments/assets/593a7058-5563-4bb0-abeb-0e4d40107ff9)
 
 ---
 
