@@ -122,7 +122,8 @@ Pada suatu saat anda mendapatkan project departemen untuk mendeploy sebuah aplik
 - Nama: `cloudfp`
 - Location: Central India (Asia Pacific)
 
-(Gambar)
+![image9](https://github.com/user-attachments/assets/c17a403d-40e7-4faf-a0d3-be3469f0e1e2)
+
 
 ---
 
@@ -206,6 +207,25 @@ Konfigurasi sama dengan `vm-loadbalancer`
 ---
 
 4. `vm-database` - Allow Private IP from `vm-app-1` and `vm-app-2`
+
+(Gambar)
+
+---
+
+#### Test Konektivitas
+Mencoba menghubungkan dengan `vm-loadbalancer`
+
+(Gambar)
+
+---
+
+Setelah terkoneksi, lakukan ping `vm-app-1` dan `vm-app-2` (melalui `vm-loadbalancer`)
+
+(Gambar)
+
+---
+
+Ping berhasil dilakukan, selanjutnya install `nginx` di `vm-loadbalancer`
 
 (Gambar)
 
