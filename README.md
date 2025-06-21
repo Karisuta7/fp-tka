@@ -138,7 +138,7 @@ Pada suatu saat anda mendapatkan project departemen untuk mendeploy sebuah aplik
 Menambahkan Subnet pada VNet:
 - Nama: `default`
 
-(Gambar)
+![image10](https://github.com/user-attachments/assets/81d074d8-32b1-4c5e-9d33-91d6a05d8949)
 
 ---
 
