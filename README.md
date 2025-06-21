@@ -215,7 +215,7 @@ Mencoba menghubungkan dengan `vm-loadbalancer`
 
 Setelah terkoneksi, lakukan ping `vm-app-1` dan `vm-app-2` (melalui `vm-loadbalancer`)
 
-(Gambar)
+![image5](https://github.com/user-attachments/assets/63d41dba-cecd-4a3a-9fe5-8bab9e47b868)
 
 ---
 
