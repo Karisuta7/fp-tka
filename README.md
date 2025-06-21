@@ -221,6 +221,6 @@ Setelah terkoneksi, lakukan ping `vm-app-1` dan `vm-app-2` (melalui `vm-loadbala
 
 Ping berhasil dilakukan, selanjutnya install `nginx` di `vm-loadbalancer`
 
-(Gambar)
+![image6](https://github.com/user-attachments/assets/fc10b725-b6fd-4e90-9602-01ceeda7c693)
 
 ---
