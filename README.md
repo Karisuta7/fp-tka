@@ -165,7 +165,7 @@ Linux (ubuntu 24.04)
 
 2. `vm-app-1`
 
-(Gambar)
+![image7](https://github.com/user-attachments/assets/cd21aeb2-8d13-4020-8cb1-8343791cd908)
 
 ---
 
