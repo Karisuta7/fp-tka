@@ -209,7 +209,7 @@ Linux (ubuntu 24.04)
 #### Test Konektivitas
 Mencoba menghubungkan dengan `vm-loadbalancer`
 
-(Gambar)
+![image15](https://github.com/user-attachments/assets/2e211f6a-e539-44d2-a372-984078567827)
 
 ---
 
