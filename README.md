@@ -202,7 +202,7 @@ Linux (ubuntu 24.04)
 
 4. `vm-database` - Allow Private IP from `vm-app-1` and `vm-app-2`
 
-(Gambar)
+![image13](https://github.com/user-attachments/assets/6e80bd89-5cbe-4c05-8e71-1fb4ea8419ed)
 
 ---
 
