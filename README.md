@@ -177,7 +177,7 @@ Linux (ubuntu 24.04)
 
 4. `vm-database`
 
-(Gambar)
+![image4](https://github.com/user-attachments/assets/9fb49ee1-3030-4918-909e-1788482609bc)
 
 ---
 
