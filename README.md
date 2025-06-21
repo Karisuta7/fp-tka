@@ -170,8 +170,6 @@ Linux (ubuntu 24.04)
 
 ![image7](https://github.com/user-attachments/assets/cd21aeb2-8d13-4020-8cb1-8343791cd908)
 
----
-
 - Private IP:
 `10.1.0.5`
 
@@ -181,11 +179,17 @@ Linux (ubuntu 24.04)
 
 ![image11](https://github.com/user-attachments/assets/6b32b031-d59b-4648-af57-9ebec57e8f5a)
 
+- Private IP:
+`10.1.0.6`
+
 ---
 
 4. `vm-database`
 
 ![image4](https://github.com/user-attachments/assets/9fb49ee1-3030-4918-909e-1788482609bc)
+
+- Private IP:
+`10.1.0.7`
 
 ---
 
