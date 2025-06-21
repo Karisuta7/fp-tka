@@ -144,7 +144,7 @@ Menambahkan Subnet pada VNet:
 
 Setting Subnet `default`
 
-(Gambar)
+![image1](https://github.com/user-attachments/assets/c8f68161-be6a-47df-ab46-be43f16188c3)
 
 ---
 
