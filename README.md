@@ -155,6 +155,9 @@ Setting Subnet `default`
 
 ---
 
+- Public IP:
+`20.193.144.232`
+
 - Private IP:
 `10.1.0.4`
 
@@ -170,6 +173,9 @@ Linux (ubuntu 24.04)
 
 ![image7](https://github.com/user-attachments/assets/cd21aeb2-8d13-4020-8cb1-8343791cd908)
 
+- Public IP:
+`20.193.143.96`
+
 - Private IP:
 `10.1.0.5`
 
@@ -178,6 +184,9 @@ Linux (ubuntu 24.04)
 3. `vm-app-2`
 
 ![image11](https://github.com/user-attachments/assets/6b32b031-d59b-4648-af57-9ebec57e8f5a)
+
+- Public IP:
+`20.193.129.183`
 
 - Private IP:
 `10.1.0.6`
