@@ -245,3 +245,82 @@ Ping berhasil dilakukan, selanjutnya install `nginx` di `vm-loadbalancer`
 ![image6](https://github.com/user-attachments/assets/fc10b725-b6fd-4e90-9602-01ceeda7c693)
 
 ---
+
+ berhasilnya koneksi SSH ke VM database (vm-database) melalui IP privat: 10.1.0.7
+
+![Image7](https://github.com/user-attachments/assets/a87ce428-c47c-476e-bf6d-db8f59571444)
+
+---
+
+## Inisialisasi Backend & Database
+
+Instalasi MongoDB dan Konfigurasi agar bisa diakses dari VM lain: Edit file /etc/mongod.conf, ubah bindIp dari 127.0.0.1 menjadi 0.0.0.0.
+
+![Image](https://github.com/user-attachments/assets/815deda3-0c3d-4ca0-a086-d1b58db039ad)
+
+![Image](https://github.com/user-attachments/assets/9ea5e832-fdc2-436f-8bd2-da82558479e3)
+---
+Setup environment dan dependensi untuk `vm-app-1` dan `vm-app-2`
+
+### Result di `vm-app-1`
+![image](https://github.com/user-attachments/assets/e24d382d-a061-42eb-a53f-a5c9f15493d1)
+
+![Image](https://github.com/user-attachments/assets/db14e8c6-2c76-4413-ac37-752b9c0633b7)
+
+### Result yang sama di `vm-app-2`
+![Image](https://github.com/user-attachments/assets/ebc805bd-4458-4b69-8ff0-bb0beafbef67)
+
+---
+
+## Konfigurasi Frontend & Load Balancer (NginX)
+
+Masuk ke VM Load Balancer menggunakan SSH, dan install Build Aplikasi React
+
+![Image](https://github.com/user-attachments/assets/936a68d2-f3df-40e0-92e2-3fb9564dafeb)
+![Image](https://github.com/user-attachments/assets/c041c8e9-4e26-48e8-9f81-ffd86fa689bc)
+---
+
+Folder build sekarang berisi file statis yang siap
+
+![Image](https://github.com/user-attachments/assets/d35db853-275d-4be5-9643-e7d599a696ff)
+
+---
+
+## Setup Load Balancer (Nginx)
+
+Masih ke VM Load Balancer menggunakan SSH, Install Nginx: `sudo apt install -y nginx`.
+Dan lakukan perubahan di konfigurasi: `sudo nano /etc/nginx/sites-available/default`.
+
+![Image](https://github.com/user-attachments/assets/b382410e-1ec7-4d0f-afa1-b07cb94ec498)
+
+Lalu ganti dengan konfigurasi ini (sesuaikan path dan IP)
+
+![Image](https://github.com/user-attachments/assets/da4b5a58-25c6-48b4-8795-b32d7662cb90)
+
+lalu test dan restart nginx `sudo systemctl restart nginx`
+
+![Image](https://github.com/user-attachments/assets/36b615ef-41f1-4495-9f6b-752b07d0a910)
+
+NGINX berhasil diaktifkan dan siap digunakan sebagai Load Balancer.
+
+---
+
+## Documentation lead & Pengujian
+
+### Halaman Login Aplikasi ITSScence
+Tampilan halaman login frontend ReactJS berhasil di-deploy dan diakses melalui IP publik.
+
+![Image](https://github.com/user-attachments/assets/2aa8f124-b1d0-4110-afad-39e7a15f07f5)
+---
+
+### Halaman Kiosk Mode
+Mode Kiosk digunakan untuk melakukan absensi menggunakan teknologi Face Recognition.
+
+![Image](https://github.com/user-attachments/assets/b8988afe-0c27-48d6-8844-1dfe9b181401)
+---
+
+### Endpoint Health Check
+Pengujian dilakukan menggunakan Postman ke endpoint `GET /health`.
+
+![Image](https://github.com/user-attachments/assets/ec82043d-cc23-4349-abc8-5aafda4ab6fb)
+---
