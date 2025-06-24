@@ -5,7 +5,7 @@
 - **Tujuan**: Merancang, membangun, dan menguji arsitektur cloud untuk aplikasi absensi face recognition.
 - **Aplikasi**: Backend (Python FastAPI), Frontend (React JS), Database.
 - **Budget**: Maksimal \$100/bulan.
-- **Platform**: GCP / Digital Ocean / Azure / Local VM.
+- **Platform**: Azure
 - **Output Utama**: Laporan di GitHub (arsitektur, implementasi, hasil load testing).
 
 ---
