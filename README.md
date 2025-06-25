@@ -319,7 +319,7 @@ Mode Kiosk digunakan untuk melakukan absensi menggunakan teknologi Face Recognit
 ![Image](https://github.com/user-attachments/assets/b8988afe-0c27-48d6-8844-1dfe9b181401)
 ---
 
-## Pengujian API
+## Rincian dan Pengujian API
 
 ### Rincian Endpoint API
 | Method | Endpoint | Description |
