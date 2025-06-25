@@ -319,6 +319,54 @@ Mode Kiosk digunakan untuk melakukan absensi menggunakan teknologi Face Recognit
 ![Image](https://github.com/user-attachments/assets/b8988afe-0c27-48d6-8844-1dfe9b181401)
 ---
 
+## Pengujian API
+
+### Rincian Endpoint API
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/health` | Health check |
+| `GET` | `/api/config` | Get configuration |
+| `POST` | `/api/config` | Update configuration |
+| `GET` | `/api/models` | Get available models |
+| `GET` | `/api/attendance/mode` | Get attendance mode |
+| `GET` | `/api/employees` | Get all employees |
+| `POST` | `/api/employees/enroll` | Enroll new employee |
+| `PUT` | `/api/employees/{id}` | Update employee data |
+| `DELETE` | `/api/employees/{id}` | Delete employee |
+| `GET` | `/api/employees/{id}/photo` | Get employee photo |
+| `POST` | `/api/recognize-face` | **Face recognition** |
+| `POST` | `/api/debug-face` | Debug face recognition |
+| `POST` | `/api/attendance` | Record attendance |
+| `GET` | `/api/attendance` | Get attendance history |
+| `GET` | `/api/attendance/{id}/photo` | Get attendance photo |
+
+## Endpoint Categories
+
+### System Endpoints
+- `GET /health` - Health check endpoint
+- `GET /api/config` - Retrieve system configuration
+- `POST /api/config` - Update system configuration
+- `GET /api/models` - Get available AI models
+
+### Employee Management
+- `GET /api/employees` - List all employees
+- `POST /api/employees/enroll` - Add new employee to system
+- `PUT /api/employees/{id}` - Update employee information
+- `DELETE /api/employees/{id}` - Remove employee from system
+- `GET /api/employees/{id}/photo` - Retrieve employee profile photo
+
+### Attendance System
+- `GET /api/attendance/mode` - Get current attendance mode
+- `POST /api/attendance` - Record new attendance entry
+- `GET /api/attendance` - Retrieve attendance history
+- `GET /api/attendance/{id}/photo` - Get attendance verification photo
+
+### Face Recognition
+- `POST /api/recognize-face` - **Main face recognition endpoint**
+- `POST /api/debug-face` - Debug and test face recognition
+
+---
+
 ### Endpoint Health Check
 Pengujian dilakukan menggunakan Postman ke endpoint `GET /health`.
 
