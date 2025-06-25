@@ -12,13 +12,13 @@
 
 ## 👥 Anggota Kelompok
 
-| Nama                     | NRP        |
-|--------------------------|------------|
-| Adi Satria Pangestu      | 5027231043 |
-| Ryan Adya Purwanto       | 5027231046 |
-| Danar Bagus Rasendriya   | 5027231055 |
-| Callista Meyra Azizah    | 5027231060 |
-| Gandhi Ert Julio         | 5027231081 |
+| Nama                     | NRP        | Tugas      |
+|--------------------------|------------|------------|
+| Adi Satria Pangestu      | 5027231043 |Back-end & Database|
+| Ryan Adya Purwanto       | 5027231046 |Setup & Implementasi Arsitektur|
+| Danar Bagus Rasendriya   | 5027231055 |Setup Locust, Load Testing & Documentation|
+| Callista Meyra Azizah    | 5027231060 |Merancang Arsitektur Cloud|
+| Gandhi Ert Julio         | 5027231081 |Front-end & Webserver/Load Balancer|
 
 ---
 
