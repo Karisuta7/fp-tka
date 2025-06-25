@@ -252,7 +252,7 @@ Ping berhasil dilakukan, selanjutnya install `nginx` di `vm-loadbalancer`
 
 ---
 
-## Inisialisasi Backend & Database
+### Inisialisasi Backend & Database
 
 Instalasi MongoDB dan Konfigurasi agar bisa diakses dari VM lain: Edit file /etc/mongod.conf, ubah bindIp dari 127.0.0.1 menjadi 0.0.0.0.
 
@@ -262,17 +262,17 @@ Instalasi MongoDB dan Konfigurasi agar bisa diakses dari VM lain: Edit file /etc
 ---
 Setup environment dan dependensi untuk `vm-app-1` dan `vm-app-2`
 
-### Result di `vm-app-1`
+#### Result di `vm-app-1`
 ![image](https://github.com/user-attachments/assets/e24d382d-a061-42eb-a53f-a5c9f15493d1)
 
 ![Image](https://github.com/user-attachments/assets/db14e8c6-2c76-4413-ac37-752b9c0633b7)
 
-### Result yang sama di `vm-app-2`
+#### Result yang sama di `vm-app-2`
 ![Image](https://github.com/user-attachments/assets/ebc805bd-4458-4b69-8ff0-bb0beafbef67)
 
 ---
 
-## Konfigurasi Frontend & Load Balancer (NginX)
+### Konfigurasi Frontend & Load Balancer (NginX)
 
 Masuk ke VM Load Balancer menggunakan SSH, dan install Build Aplikasi React
 
@@ -286,7 +286,7 @@ Folder build sekarang berisi file statis yang siap
 
 ---
 
-## Setup Load Balancer (Nginx)
+### Setup Load Balancer (Nginx)
 
 Masih ke VM Load Balancer menggunakan SSH, Install Nginx: `sudo apt install -y nginx`.
 Dan lakukan perubahan di konfigurasi: `sudo nano /etc/nginx/sites-available/default`.
@@ -305,7 +305,7 @@ NGINX berhasil diaktifkan dan siap digunakan sebagai Load Balancer.
 
 ---
 
-## Documentation lead & Pengujian
+## Tampilan Antarmuka
 
 ### Halaman Login Aplikasi ITSScence
 Tampilan halaman login frontend ReactJS berhasil di-deploy dan diakses melalui IP publik.
