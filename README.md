@@ -377,40 +377,40 @@ Pengujian dilakukan menggunakan Postman ke endpoint `GET /health`.
 Load Testing dilakukan dengan menguji Endpoint API `api/recognize_face` dengan beberapa skenario jumlah pengguna.
 
 ### 1 User
-Graph
+**Graph**
 ![chart locust user 1](https://github.com/user-attachments/assets/8b9174e3-41e7-49f8-99b0-df79d0535907)
 ***
-Statistic
+**Statistic**
 ![stat locust user 1](https://github.com/user-attachments/assets/caf0b35b-8ce6-4d4b-ac2c-00b1854e8b38)
 ***
 Grafik menunjukkan adanya satu lonjakan waktu respons yang signifikan hingga mencapai 8.505 ms di awal pengujian. Setelah lonjakan tersebut, performa kembali normal dengan median waktu respons 270 ms. Pada skenario ini belum terdeteksi adanya failure.
 ***
 
 ### 3 User
-Graph
+**Graph**
 ![chart locust user 3](https://github.com/user-attachments/assets/ed40acde-aa97-4f6b-9277-26d7b95a7c95)
 ***
-Statistic
+**Statistic**
 ![stat locust user 3](https://github.com/user-attachments/assets/c846965e-9c69-4c48-82bf-4ab73035a65c)
 ***
 Aplikasi berjalan sangat stabil dengan 3 pengguna, RPS (Request per Second) konsisten di angka 1.8 dan waktu respons sangat baik dan dapat diprediksi, dengan median 240 ms dan 95th percentile 490 ms. Belum ada failure.
 ***
 
 ### 5 User
-Graph
+**Graph**
 ![chart locust user 5](https://github.com/user-attachments/assets/9ec085c7-5835-4f45-a0cd-2df7e1370c79)
 ***
-Statistic
+**Statistic**
 ![stat locust user 5](https://github.com/user-attachments/assets/0c82435e-793e-43ca-8901-d16440f4afab)
 ***
 Performa tetap stabil dengan RPS naik menjadi sekitar 2.8 dan waktu respons sedikit meningkat namun masih dalam batas wajar, dengan median 330 ms dan 95th percentile 640 ms. Belum ada failure.
 ***
 
 ### 10 User
-Graph
+**Graph**
 ![chart locust user 10](https://github.com/user-attachments/assets/b0cfc10e-ebf4-452f-8803-4cd1ff95f2ce)
 ***
-Statistic
+**Statistic**
 ![stat locust user 10](https://github.com/user-attachments/assets/4315d047-67a7-4a76-8682-c4de95e15246)
 ***
 Sistem berhasil menangani 10 pengguna tanpa failure, tetapi RPS meningkat menjadi sekitar 5.4
@@ -418,35 +418,35 @@ Walaupun median waktu respons tetap rendah (240 ms), grafik 95th percentile mula
 ***
 
 ### 15 User
-Graph
+**Graph**
 ![chart locust user 15](https://github.com/user-attachments/assets/fcfb2e4a-d0d5-4850-a048-aeffa56331e0)
 ***
-Statistic
+**Statistic**
 ![stat locust user 15](https://github.com/user-attachments/assets/8f565429-f69a-4400-b42a-66d166824a68)
 ***
 Aplikasi masih berjalan tanpa mencatat kegagalan. Tetapi, grafik 95th percentile response time menunjukkan ketidakstabilan yang jelas, dengan lonjakan-lonjakan tajam yang sering terjadi, beberapa di antaranya mencapai di atas 3.000 ms. Ini mengindikasikan bahwa meskipun sistem tidak gagal, pengalaman pengguna (user experience) menurun drastis.
 ***
 
 ### 20 User (Attempt 1)
-Graph
+**Graph**
 ![chart locust user 20](https://github.com/user-attachments/assets/e09418c0-0ad6-4770-abf3-91ce7d31eebb)
 ***
-Statistic
+**Statistic**
 ![stat locust user 20](https://github.com/user-attachments/assets/52d2b732-d1b4-4866-9a5a-4c7e9d54352e)
 ***
 Pengujian ini menunjukkan kegagalan sistem secara total. RPS sempat naik lalu anjlok mendekati nol, menandakan server tidak lagi mampu merespons permintaan. Waktu respons melonjak sangat tinggi, dengan 95th percentile mencapai 119.000 ms (119 detik), yang tidak dapat diterima. Failure tercatat sebesar 14%.
 
 ### 20 User (Attempt 2 dan 3)
-Graph 1
+**Graph 1**
 ![chart locust user 20 rev](https://github.com/user-attachments/assets/9f3dfcb9-11b4-4a62-a9c0-c90b416b919d)
 ***
-Graph 2
+**Graph 2**
 ![chart locust uer 20 rev rev](https://github.com/user-attachments/assets/91fdf8ca-8078-42c9-bf2d-46c0800261c5)
 ***
-Statistic 1
+**Statistic 1**
 ![stat locust user 20 rev](https://github.com/user-attachments/assets/e0a3276a-b378-4673-8615-54a66198fbac)
 ***
-Statistic 2
+**Statistic 2**
 ![stat locust user 20 rev rev](https://github.com/user-attachments/assets/de30dc76-1f96-4dd3-ab25-f17bb5ffa4bd)
 ***
 Pada percobaan 20 user ini, dilakukan clear database dengan harapan aplikasi dapat berjalan optimal. Namun meskipun database telah dibersihkan, sistem tetap tidak mampu menangani 20 pengguna secara stabil. Grafik RPS dan waktu respons menunjukkan pola "gergaji" (naik-turun secara drastis), menandakan sistem kewalahan dan hanya bisa memproses permintaan secara tidak teratur dan putus-putus. Waktu respons sangat berfluktuasi, dengan lonjakan hingga 12.000-13.000 ms.
