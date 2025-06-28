@@ -367,10 +367,72 @@ Mode Kiosk digunakan untuk melakukan absensi menggunakan teknologi Face Recognit
 
 ---
 
-### Endpoint Health Check
-Pengujian dilakukan menggunakan Postman ke endpoint `GET /health`.
+## Endpoint Testing
+Pengujian dilakukan menggunakan Postman
 
-![Image](https://github.com/user-attachments/assets/ec82043d-cc23-4349-abc8-5aafda4ab6fb)
+### Endpoint Health Check
+![health](https://github.com/user-attachments/assets/d2f1dd25-44f5-472a-8a66-f5c5663c5a93)
+
+---
+
+### Endpoint Kiosk
+![kiosk](https://github.com/user-attachments/assets/606ce9a7-471a-4491-8b71-88ed3cdea0b5)
+
+---
+
+### Endpoint Root
+![GET ROOT](https://github.com/user-attachments/assets/74a23976-18fe-4261-908e-cbc9d6318107)
+
+---
+
+### Endpoint Models
+![GETMODEL](https://github.com/user-attachments/assets/87673cfd-c1db-447f-8dbc-6c183fb6e034)
+
+---
+
+### Endpoint Config
+![GET CONFIG](https://github.com/user-attachments/assets/acea51a2-90ed-4a81-afac-25234d8769ae)
+
+---
+
+### Endpoint Attendance History
+![GET ATTENDANCE MODE](https://github.com/user-attachments/assets/271b8938-409f-465d-80ec-9596d2c1918d)
+
+---
+
+### Endpoint Employee
+![GET EMPLOYEE](https://github.com/user-attachments/assets/39c56abf-6355-4ecf-a76b-1b7b9163f843)
+
+---
+
+### Endpoint Attendance mode
+![GET ATTENDANCE MODE](https://github.com/user-attachments/assets/fb841fb9-848b-4d79-b04d-6736d64f0347)
+
+---
+
+### Endpoint Update Config
+![POST CONFIG](https://github.com/user-attachments/assets/d4009c08-be83-44ed-8a49-99c51e2a7103)
+
+---
+
+### Attendance Record Page History
+![Attendance rec history](https://github.com/user-attachments/assets/fd01bbfa-464c-449a-8108-c6acb906a08c)
+
+---
+
+### Face Recognition Dashboard
+![Dashboard statistic](https://github.com/user-attachments/assets/2dd029fd-55b9-46af-9938-1e5ac30cf02f)
+
+---
+
+### Enroll User Page
+![enroll users](https://github.com/user-attachments/assets/1f10a242-de7b-42ef-b5cc-2027bc5b42d3)
+
+---
+
+### Setting & Config
+![Config settings](https://github.com/user-attachments/assets/85536743-f5f2-4b3f-9516-b3941130f3cc)
+
 ---
 
 ## Load Testing dan Analisis Hasil
