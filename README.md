@@ -490,6 +490,8 @@ Dedicated database VM → No resource sharing with app logic
 Private network communication → Low latency antar VM
 Minimal network hops → Direct communication paths
 Azure network backbone → High-bandwidth, low-latency
+
+
 ⚠️ Potential Bottlenecks (Yang Perlu Diperhatikan):
 1. Face Recognition Processing
 DeepFace/TensorFlow computation → CPU intensive operations
