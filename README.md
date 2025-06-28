@@ -451,3 +451,14 @@ Statistic 2
 ***
 Pada percobaan 20 user ini, dilakukan clear database dengan harapan aplikasi dapat berjalan optimal. Namun meskipun database telah dibersihkan, sistem tetap tidak mampu menangani 20 pengguna secara stabil. Grafik RPS dan waktu respons menunjukkan pola "gergaji" (naik-turun secara drastis), menandakan sistem kewalahan dan hanya bisa memproses permintaan secara tidak teratur dan putus-putus. Waktu respons sangat berfluktuasi, dengan lonjakan hingga 12.000-13.000 ms.
 ***
+
+## Kesimpulan
+Proyek cloud ini merupakan sistem presensi berbasis pengenalan wajah yang telah diuji menggunakan load testing dengan Locust untuk mengevaluasi performa endpoint /api/recognize-face. Berdasarkan pengujian bertahap dengan jumlah pengguna simultan sebanyak 1, 3, 5, 10, 15, hingga 20 user, diperoleh hasil bahwa sistem berfungsi dengan baik hingga 15 pengguna, meskipun dengan penurunan performa yang signifikan (response time > 4 detik). Pada pengujian dengan 20 pengguna, sistem mengalami overload, ditandai dengan RPS mendekati nol dan tingkat kegagalan yang tinggi. Hal ini mengindikasikan bahwa sistem saat ini belum optimal untuk beban berat atau penggunaan skala besar.
+
+## Saran perbaikan dan Optimasi
+1. Optimasi Backend
+- Gunakan server asynchronous seperti Uvicorn dengan multiple worker (--workers n) untuk meningkatkan kapasitas concurrent request.
+- Pastikan semua proses berat seperti face recognition tidak dijalankan blocking (gunakan async jika memungkinkan).
+
+2. Terapkan Sistem Antrian (Queueing)
+- Gunakan sistem antrean (contoh: Celery + Redis) untuk menangani proses pengenalan wajah secara asynchronous, sehingga server tidak terbebani langsung oleh banyak request bersamaan.
