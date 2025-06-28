@@ -452,6 +452,55 @@ Pengujian ini menunjukkan kegagalan sistem secara total. RPS sempat naik lalu an
 Pada percobaan 20 user ini, dilakukan clear database dengan harapan aplikasi dapat berjalan optimal. Namun meskipun database telah dibersihkan, sistem tetap tidak mampu menangani 20 pengguna secara stabil. Grafik RPS dan waktu respons menunjukkan pola "gergaji" (naik-turun secara drastis), menandakan sistem kewalahan dan hanya bisa memproses permintaan secara tidak teratur dan putus-putus. Waktu respons sangat berfluktuasi, dengan lonjakan hingga 12.000-13.000 ms.
 ***
 
+**HTOP APP 1**
+![Image](https://github.com/user-attachments/assets/1c8a1aef-0e89-4d61-aa81-f09b03ebbbf1)
+Load Average: 0.05, 0.12, 0.04 (sangat rendah)
+CPU Usage: Minimal load, system very stable
+Memory: Sufficient, no memory pressure
+Python Processes: Multiple uvicorn workers running efficiently
+---
+
+**HTOP APP 2**
+![Image](https://github.com/user-attachments/assets/07b1453c-7bfd-40ef-9e84-7632a36cc042)
+Load Average: 0.30, 0.08, 0.03 (rendah)
+CPU Usage: Slightly higher than App1, masih dalam batas normal
+Process Distribution: Load balancing working properly
+---
+
+**HTOP LOAD BALANCING**
+![Image](https://github.com/user-attachments/assets/53807aaf-675f-4487-8c75-ca37813a735f)
+Load Average: 0.00, 0.00, 0.00 (minimal)
+CPU Usage: Nginx very efficient, almost no overhead
+Network Handling: Optimal request distribution
+
+📈 Faktor yang Mempengaruhi Response Time & RPS
+✅ Faktor yang Meningkatkan Performance:
+1. Load Distribution
+Round-robin balancing memastikan request tersebar merata
+No single server bottleneck karena ada 2 app servers
+2. Application Server Optimization
+FastAPI async framework → Non-blocking I/O operations
+Uvicorn ASGI server → High-performance async server
+Multiple workers → Concurrent request processing
+3. Database Architecture
+MongoDB GridFS → Efficient binary data (face images) storage
+Indexed queries → Fast employee lookup
+Dedicated database VM → No resource sharing with app logic
+4. Network Optimization
+Private network communication → Low latency antar VM
+Minimal network hops → Direct communication paths
+Azure network backbone → High-bandwidth, low-latency
+⚠️ Potential Bottlenecks (Yang Perlu Diperhatikan):
+1. Face Recognition Processing
+DeepFace/TensorFlow computation → CPU intensive operations
+Image processing → Memory and CPU overhead
+Model loading → Initial model load time
+2. Database I/O
+Face image storage/retrieval → Large binary data transfer
+Concurrent database connections → Connection pool managemen
+
+---
+
 ## Kesimpulan
 Proyek cloud ini merupakan sistem presensi berbasis pengenalan wajah yang telah diuji menggunakan load testing dengan Locust untuk mengevaluasi performa endpoint /api/recognize-face. Berdasarkan pengujian bertahap dengan jumlah pengguna simultan sebanyak 1, 3, 5, 10, 15, hingga 20 user, diperoleh hasil bahwa sistem berfungsi dengan baik hingga 15 pengguna, meskipun dengan penurunan performa yang signifikan (response time > 4 detik). Pada pengujian dengan 20 pengguna, sistem mengalami overload, ditandai dengan RPS mendekati nol dan tingkat kegagalan yang tinggi. Hal ini mengindikasikan bahwa sistem saat ini belum optimal untuk beban berat atau penggunaan skala besar.
 
