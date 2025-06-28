@@ -455,20 +455,20 @@ Pada percobaan 20 user ini, dilakukan clear database dengan harapan aplikasi dap
 **HTOP APP 1**
 ![Image](https://github.com/user-attachments/assets/1c8a1aef-0e89-4d61-aa81-f09b03ebbbf1)
 ***
-
 Load Average: 0.05, 0.12, 0.04 (sangat rendah)
 CPU Usage: Minimal load, system very stable
 Memory: Sufficient, no memory pressure
 Python Processes: Multiple uvicorn workers running efficiently
+
 ---
 
 **HTOP APP 2**
 ![Image](https://github.com/user-attachments/assets/07b1453c-7bfd-40ef-9e84-7632a36cc042)
 ***
-
 Load Average: 0.30, 0.08, 0.03 (rendah)
 CPU Usage: Slightly higher than App1, masih dalam batas normal
 Process Distribution: Load balancing working properly
+
 ---
 
 **HTOP LOAD BALANCING**
